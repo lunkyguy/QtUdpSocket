@@ -12,7 +12,8 @@ QtUdpServer::QtUdpServer()
 	if (result)
 	{
 		//设置缓冲区
-		udpServer->setSocketOption(QAbstractSocket::ReceiveBufferSizeSocketOption, 1024 * 1024 * 8);
+		//udp无效注释
+		//udpServer->setSocketOption(QAbstractSocket::ReceiveBufferSizeSocketOption, 1024 * 1024 * 8);
 		//连接接收信号槽     
 		connect(udpServer, SIGNAL(readyRead()), this, SLOT(dataReceived()));
 	}
